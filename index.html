@@ -33,7 +33,14 @@
   header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
   nav{display:flex;align-items:center;justify-content:space-between;height:72px}
   .logo{display:flex;align-items:center;gap:12px}
-  .logo svg{width:46px;height:46px;flex:none}
+  .logo-img{height:46px;width:auto;display:block}
+  .foot-logo img{height:40px;background:#fff;padding:9px 16px;border-radius:12px;display:block}
+  .act img.thumb{height:180px;width:100%;object-fit:cover;display:block}
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .gallery-grid .gitem{display:block;border-radius:12px;overflow:hidden;aspect-ratio:4/3}
+  .gallery-grid img{width:100%;height:100%;object-fit:cover;transition:.35s}
+  .gallery-grid .gitem:hover img{transform:scale(1.07)}
+  @media(max-width:820px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
   .brand-name{font-weight:600;font-size:1.02rem;color:var(--navy);line-height:1.15}
   .brand-name small{display:block;font-family:'Sarabun';font-weight:400;font-size:.72rem;color:var(--muted);letter-spacing:.02em}
   .nav-links{display:flex;gap:28px;align-items:center}
@@ -126,26 +133,16 @@
 </head>
 <body>
 
-<!-- ===== EMBLEM (SVG placeholder — แทนโลโก้จริงจากเพจ) ===== -->
-<svg width="0" height="0" style="position:absolute"><symbol id="emblem" viewBox="0 0 100 100">
-  <circle cx="50" cy="50" r="48" fill="#fff" stroke="#0f7c8a" stroke-width="3"/>
-  <path d="M50 24l24 11-24 11-24-11z" fill="#0e3a5f"/>
-  <path d="M32 44v13c0 6 8 10 18 10s18-4 18-10V44l-18 8z" fill="#0f7c8a"/>
-  <circle cx="50" cy="70" r="6" fill="#f2a922"/>
-</symbol></svg>
-
 <header>
   <nav class="wrap">
     <a class="logo" href="#top">
-      <svg><use href="#emblem"/></svg>
-      <span class="brand-name">สมาคมโรงเรียนเอกชนนอกระบบ จังหวัดภูเก็ต
-        <small>Phuket Private Non-Formal Education Association</small>
-      </span>
+      <img src="img/logo.png" alt="PNEA – สมาคมโรงเรียนเอกชนนอกระบบ จังหวัดภูเก็ต" class="logo-img">
     </a>
     <div class="nav-links">
       <a href="#about">เกี่ยวกับสมาคม</a>
       <a href="#categories">โรงเรียนสมาชิก</a>
       <a href="#activities">กิจกรรม</a>
+      <a href="#gallery">แกลเลอรี</a>
       <a href="#contact">ติดต่อ</a>
       <a href="#join" class="btn btn-gold" style="padding:9px 20px">สมัครสมาชิก</a>
     </div>
@@ -223,30 +220,50 @@
       <p>ความร่วมมือ กิจกรรม และการพัฒนาเครือข่ายของสมาคม</p>
     </div>
     <div class="act-grid">
-      <div class="act">
-        <div class="thumb">[ รูปกิจกรรมจริง — รอวาง ]</div>
+      <a class="act" href="https://www.facebook.com/PhuketPNEA/posts/1451477180345502" target="_blank" rel="noopener">
+        <img class="thumb" src="img/a1.jpg" alt="จับมือสมาคมโรงเรียนเอกชนภูเก็ตในงาน Phuket Health Expo" loading="lazy">
         <div class="body">
-          <div class="tag">ภาคีเครือข่าย</div>
+          <div class="tag">ภาคีเครือข่าย · ก.ค. 2569</div>
           <h3>จับมือสมาคมโรงเรียนเอกชนภูเก็ต</h3>
-          <p>นายกสมาคมฯ ร่วมกับสมาคมโรงเรียนเอกชนจังหวัดภูเก็ต และสมาชิก สร้างความร่วมมือด้านการศึกษาในงานระดับจังหวัด</p>
+          <p>นายกสมาคมฯ จับมือสมาคมโรงเรียนเอกชนภูเก็ต ร่วมออกบูธและกิจกรรมในงาน Phuket Health Expo ณ เซ็นทรัล ภูเก็ต (1–5 ก.ค. 2569)</p>
         </div>
-      </div>
-      <div class="act">
-        <div class="thumb ph">รูปกิจกรรม (placeholder)</div>
+      </a>
+      <a class="act" href="https://www.facebook.com/photo/?fbid=1118627730297117&set=a.481563864003510" target="_blank" rel="noopener">
+        <img class="thumb" src="img/a2.jpg" alt="ประชุมขับเคลื่อนนโยบายการศึกษาเอกชน" loading="lazy">
         <div class="body">
-          <div class="tag">พัฒนาบุคลากร</div>
-          <h3>อบรม / พัฒนาครูสมาชิก</h3>
-          <p>เนื้อหารอเติมจากข้อมูลจริงของสมาคม</p>
+          <div class="tag">นโยบายการศึกษา · 2568</div>
+          <h3>ประชุมขับเคลื่อนนโยบายการศึกษาเอกชน</h3>
+          <p>ร่วมประชุมการขับเคลื่อนนโยบายและสร้างการมีส่วนร่วมของภาคเอกชนในการจัดการศึกษา ครั้งที่ 1/2568 ณ สพป.ภูเก็ต</p>
         </div>
-      </div>
-      <div class="act">
-        <div class="thumb ph">รูปกิจกรรม (placeholder)</div>
+      </a>
+      <a class="act" href="https://www.facebook.com/PhuketPNEA/posts/1445677737592113" target="_blank" rel="noopener">
+        <img class="thumb" src="img/a3.jpg" alt="HOPE SPACE 2026: AI Train the Trainer" loading="lazy">
         <div class="body">
-          <div class="tag">ประชุมสมาคม</div>
-          <h3>ประชุมสมาชิกประจำปี</h3>
-          <p>เนื้อหารอเติมจากข้อมูลจริงของสมาคม</p>
+          <div class="tag">พัฒนาครู · มิ.ย. 2569</div>
+          <h3>HOPE SPACE 2026: AI Train the Trainer</h3>
+          <p>นำสมาชิกเข้าร่วมโครงการพัฒนาครู บุคลากรการศึกษา และเครือข่ายชุมชน ให้เข้าใจและใช้ประโยชน์จาก AI (27 มิ.ย. 2569)</p>
         </div>
-      </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery" style="background:var(--white)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">ภาพกิจกรรม</div>
+      <h2>แกลเลอรี</h2>
+      <p>บรรยากาศกิจกรรมและความร่วมมือของสมาคม</p>
+    </div>
+    <div class="gallery-grid">
+      <a class="gitem" href="img/g01.jpg" target="_blank" rel="noopener"><img src="img/g01.jpg" alt="กิจกรรมสมาคม PNEA — Phuket Health Expo" loading="lazy"></a>
+      <a class="gitem" href="img/g02.jpg" target="_blank" rel="noopener"><img src="img/g02.jpg" alt="กิจกรรมสมาคม PNEA" loading="lazy"></a>
+      <a class="gitem" href="img/g03.jpg" target="_blank" rel="noopener"><img src="img/g03.jpg" alt="กิจกรรมสมาคม PNEA" loading="lazy"></a>
+      <a class="gitem" href="img/g04.jpg" target="_blank" rel="noopener"><img src="img/g04.jpg" alt="บูธและกิจกรรมสมาคม PNEA" loading="lazy"></a>
+      <a class="gitem" href="img/g05.jpg" target="_blank" rel="noopener"><img src="img/g05.jpg" alt="โครงการ HOPE SPACE 2026 AI Train the Trainer" loading="lazy"></a>
+      <a class="gitem" href="img/g06.jpg" target="_blank" rel="noopener"><img src="img/g06.jpg" alt="โครงการ HOPE SPACE 2026 AI Train the Trainer" loading="lazy"></a>
+      <a class="gitem" href="img/g07.jpg" target="_blank" rel="noopener"><img src="img/g07.jpg" alt="โครงการ HOPE SPACE 2026 AI Train the Trainer" loading="lazy"></a>
     </div>
   </div>
 </section>
@@ -282,10 +299,8 @@
 
 <footer>
   <div class="wrap">
-    <a class="logo" href="#top"><svg style="width:40px;height:40px"><use href="#emblem"/></svg>
-      <span class="brand-name">สมาคมโรงเรียนเอกชนนอกระบบ จังหวัดภูเก็ต</span></a>
-    <p>© 2568 สมาคมโรงเรียนเอกชนนอกระบบ จังหวัดภูเก็ต (PNEA) · Phuket Private Non-Formal Education Association</p>
-    <p style="margin-top:6px;font-size:.82rem;opacity:.7">เว็บไซต์ตัวอย่าง v1 · ข้อมูลบางส่วนรอปรับปรุงจากสมาคม</p>
+    <a class="logo foot-logo" href="#top"><img src="img/logo.png" alt="PNEA – สมาคมโรงเรียนเอกชนนอกระบบ จังหวัดภูเก็ต"></a>
+    <p style="margin-top:14px">© 2569 สมาคมโรงเรียนเอกชนนอกระบบ จังหวัดภูเก็ต (PNEA) · Phuket Private Non-Formal Education Association</p>
   </div>
 </footer>
 
