@@ -114,6 +114,42 @@ section.tight{padding:56px 0}
 .cat-full p{color:var(--muted);font-size:.92rem}
 @media(max-width:820px){.cat-full{grid-template-columns:1fr}}
 
+/* ===== ทำเนียบโรงเรียนสมาชิก (สร้างจาก data/schools/*.json) ===== */
+.dir-tools{max-width:900px;margin:0 auto 30px;text-align:center}
+#s-search{width:100%;max-width:520px;padding:12px 18px;border:1px solid var(--line);border-radius:999px;font-family:'Sarabun';font-size:.96rem;background:var(--white);color:var(--ink)}
+#s-search:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(15,124,138,.12)}
+.dir-filters{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:18px 0 12px}
+.dir-filters .f{padding:7px 16px;border-radius:999px;border:1px solid var(--line);background:var(--white);font-family:'Prompt';font-size:.86rem;color:var(--muted);cursor:pointer;transition:.2s}
+.dir-filters .f:hover{border-color:var(--teal);color:var(--teal-dk)}
+.dir-filters .f.active{background:var(--teal);border-color:var(--teal);color:#fff}
+.dir-count{font-size:.88rem;color:var(--muted)}
+.dir-count b{font-family:'Prompt';color:var(--teal);font-size:1.05rem}
+.dir-foot{max-width:760px;margin:30px auto 0;text-align:center;font-size:.85rem;color:var(--muted)}
+.dir-foot a{color:var(--teal)}
+
+.school-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:1000px){.school-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.school-grid{grid-template-columns:1fr}}
+.school{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;transition:.25s}
+.school:hover{box-shadow:0 22px 45px -30px rgba(14,58,95,.55);border-color:transparent}
+.s-head{display:flex;gap:12px;align-items:flex-start}
+.s-ic{width:42px;height:42px;flex:none;border-radius:12px;display:grid;place-items:center;font-size:1.25rem;background:linear-gradient(135deg,#e8f5f7,#d5ebef)}
+.school h3{font-size:1rem;color:var(--navy);line-height:1.35}
+.s-en{font-size:.78rem;color:var(--muted);margin-top:2px}
+.s-cat{margin-left:auto;flex:none;font-family:'Prompt';font-size:.7rem;padding:4px 10px;border-radius:999px;background:#fdf3dd;color:#7a5c10;height:fit-content}
+.s-one{font-size:.9rem;color:#38474f;margin:14px 0 12px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.chip{font-size:.74rem;padding:3px 10px;border-radius:999px;background:var(--bg);border:1px solid var(--line);color:var(--muted)}
+.s-meta{font-size:.86rem;color:var(--muted);margin-bottom:14px}
+.s-meta .m{display:flex;gap:8px;margin-bottom:6px;align-items:flex-start}
+.s-meta .m span{flex:none}
+.s-meta a{color:var(--teal-dk)}
+.s-meta a:hover{color:var(--teal)}
+.s-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.s-links a{font-family:'Prompt';font-size:.8rem;padding:6px 12px;border-radius:999px;border:1px solid var(--line);color:var(--teal-dk);transition:.2s}
+.s-links a:hover{background:var(--teal);border-color:var(--teal);color:#fff}
+.pending{display:inline-block;margin-top:12px;font-size:.76rem;color:#7a5c10;background:#fff8e6;border:1px solid #f2d58a;border-radius:8px;padding:4px 10px}
+
 /* ===== ACTIVITIES ===== */
 .act-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .act{background:var(--white);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.25s;display:block}
