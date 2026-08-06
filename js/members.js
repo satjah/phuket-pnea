@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
       c.style.display = show ? '' : 'none';
       if (show) shown++;
     });
+    var empty = document.getElementById('s-empty');
+    if (empty) empty.hidden = shown !== 0;
     if (count) count.textContent = shown;
   }
 
