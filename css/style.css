@@ -158,7 +158,11 @@ section.tight{padding:56px 0}
 .school h3{font-size:1rem;color:var(--navy);line-height:1.35}
 .s-en{font-size:.78rem;color:var(--muted);margin-top:2px}
 .s-cat{margin-left:auto;flex:none;font-family:'Prompt';font-size:.7rem;padding:4px 10px;border-radius:999px;background:#fdf3dd;color:#7a5c10;height:fit-content}
-.s-one{font-size:.9rem;color:#38474f;margin:14px 0 12px}
+/* ป้ายแยกสมาชิกสมาคม ออกจากโรงเรียนที่ดึงมาจากทะเบียน สช. — ห้ามให้สองกลุ่มนี้ดูเหมือนกัน */
+.s-badge{display:inline-block;margin-top:12px;font-family:'Prompt';font-size:.7rem;padding:3px 10px;border-radius:999px}
+.s-badge.member{background:linear-gradient(135deg,#fdf3dd,#f8e6bd);color:#7a5c10;border:1px solid #eccf8e}
+.s-badge.other{background:var(--bg);color:var(--muted);border:1px solid var(--line)}
+.s-one{font-size:.9rem;color:#38474f;margin:12px 0}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
 .chip{font-size:.74rem;padding:3px 10px;border-radius:999px;background:var(--bg);border:1px solid var(--line);color:var(--muted)}
 .s-meta{font-size:.86rem;color:var(--muted);margin-bottom:14px}

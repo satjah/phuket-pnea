@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
     cards.forEach(function (c) {
       var okF = filter === 'all' ||
         (filter.indexOf('cat:') === 0 && c.dataset.cat === filter.slice(4)) ||
-        (filter.indexOf('dis:') === 0 && c.dataset.district === filter.slice(4));
+        (filter.indexOf('dis:') === 0 && c.dataset.district === filter.slice(4)) ||
+        (filter.indexOf('mem:') === 0 && c.dataset.member === filter.slice(4));
       var okQ = !q || (c.dataset.search || '').toLowerCase().indexOf(q) !== -1;
       var show = okF && okQ;
       c.style.display = show ? '' : 'none';
