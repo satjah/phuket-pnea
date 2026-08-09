@@ -234,7 +234,9 @@ footer{background:var(--navy);color:#c9d8e0;padding:44px 0;text-align:center;fon
 footer .logo{justify-content:center;margin-bottom:14px}
 footer .brand-name{color:#fff}
 footer a{color:var(--gold)}
-.foot-logo img{height:40px;width:auto;background:#fff;padding:9px 16px;border-radius:12px;display:block}
+/* box-sizing:content-box จำเป็น — ทั้งไฟล์ตั้ง border-box ไว้ ทำให้ height:40px รวม padding
+   แล้ว width:auto ของ SVG คำนวณไม่ออก (โลโก้เหลือ 32px) */
+.foot-logo img{height:40px;width:auto;box-sizing:content-box;background:#fff;padding:9px 16px;border-radius:12px;display:block}
 .foot-nav{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin:16px 0 18px}
 .foot-nav a{color:#c9d8e0;font-family:'Prompt';font-size:.9rem}
 .foot-nav a:hover{color:#fff}
