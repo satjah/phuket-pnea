@@ -235,8 +235,10 @@ footer .logo{justify-content:center;margin-bottom:14px}
 footer .brand-name{color:#fff}
 footer a{color:var(--gold)}
 /* กำหนดขนาดตรง ๆ ไม่พึ่ง width:auto — ทั้งไฟล์ตั้ง border-box ไว้ height จึงรวม padding
-   แล้วเบราว์เซอร์คำนวณ width:auto ของ SVG ไม่ออก (โลโก้เหลือ 32px) · 130x58 = เนื้อ 98x40 = อัตราส่วน 2.45 ตรงไฟล์ */
-.foot-logo img{width:130px;height:58px;background:#fff;padding:9px 16px;border-radius:12px;display:block}
+   แล้วเบราว์เซอร์คำนวณ width:auto ของ SVG ไม่ออก · 130x58 = เนื้อ 98x40 = อัตราส่วน 2.45 ตรงไฟล์
+   🔴 max-width:none จำเป็น — กฎรวม img{max-width:100%} ไปอิงความกว้างของ <a> ที่เป็น flex แล้ววัดได้ 0
+   ทำให้โลโก้ยุบเหลือ 32px (เท่ากับ padding ล้วน) ทั้งที่ตั้ง width:130px ไว้แล้ว */
+.foot-logo img{width:130px;height:58px;max-width:none;background:#fff;padding:9px 16px;border-radius:12px;display:block}
 .foot-nav{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin:16px 0 18px}
 .foot-nav a{color:#c9d8e0;font-family:'Prompt';font-size:.9rem}
 .foot-nav a:hover{color:#fff}
